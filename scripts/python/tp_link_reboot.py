@@ -12,7 +12,7 @@ def tp_link_reboot():
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome('chromedriver', options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
 
     driver.get(f'http://{args.ip}')
     driver.implicitly_wait(3)
