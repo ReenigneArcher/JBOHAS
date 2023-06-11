@@ -22,8 +22,8 @@ def tp_link_reboot():
     sleep(2)
 
     # password_field = driver.find_element(By.ID, "login-password")
-    password_field = driver.find_element(By.XPATH,
-                                         "/html/body/div[1]/div[2]/div[1]/div[1]/div/form[1]/div[2]/div/div/div[1]/span[2]/input[1]")
+    password_field = driver.find_element(
+        By.XPATH, "/html/body/div[1]/div[2]/div[1]/div[1]/div/form[1]/div[2]/div/div/div[1]/span[2]/input[1]")
     password_field.send_keys(args.password)
 
     login_button = driver.find_element(By.ID, "cloud-login-btn")
