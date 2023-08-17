@@ -1,8 +1,13 @@
+#!/usr/bin/python3
+
+# standard imports
 import argparse
+from time import sleep
+
+# lib imports
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from time import sleep
 
 
 def tp_link_reboot():

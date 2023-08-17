@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # standard imports
 import argparse
 
@@ -17,14 +19,14 @@ def web_url_status():
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     try:
-        response = REQUESTS_TYPE[args.type](url=args.url, verify=not args.verify_disable)
+        response = REQUESTS_TYPE[args.type.lower()](url=args.url, timeout=10, verify=not args.verify_disable)
     except (requests.exceptions.RequestException, requests.exceptions.RequestException):
-        print('off')
+        print('OFF')
     else:
         if response.status_code in [requests.codes.ok]:
-            print('on')
+            print('ON')
         else:
-            print('off')
+            print('OFF')
 
 
 def main():
